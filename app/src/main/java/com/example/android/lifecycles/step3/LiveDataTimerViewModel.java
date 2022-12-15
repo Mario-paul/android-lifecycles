@@ -49,7 +49,7 @@ public class LiveDataTimerViewModel extends ViewModel {
 
                 // setValue() cannot be called from a background thread so post to main thread.
 
-                mElapsedTime.postValue(newValue); // step 3 - post the new value with LiveData.postValue()
+                mElapsedTime.postValue(newValue); // STEP 3 - post the new value with LiveData.postValue()
 
             }
         }, ONE_SECOND, ONE_SECOND);

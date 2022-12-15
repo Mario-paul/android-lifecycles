@@ -44,10 +44,10 @@ public class BoundLocationManager {
                                      LocationListener listener, Context context) {
             mContext = context;
             mListener = listener;
-            lifecycleOwner.getLifecycle().addObserver(this); // TODO: Add lifecycle observer
+            lifecycleOwner.getLifecycle().addObserver(this); // STEP 4: Add lifecycle observer
         }
 
-        @OnLifecycleEvent(Lifecycle.Event.ON_RESUME) // TODO: Call this on resume
+        @OnLifecycleEvent(Lifecycle.Event.ON_RESUME) // STEP 4: Call this on resume
         void addLocationListener() {
             // Note: Use the Fused Location Provider from Google Play Services instead.
             // https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderApi
@@ -65,7 +65,7 @@ public class BoundLocationManager {
             }
         }
 
-        @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE) // TODO: Call this on pause
+        @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE) // STEP 4: Call this on pause
         void removeLocationListener() {
             if (mLocationManager == null) {
                 return;
