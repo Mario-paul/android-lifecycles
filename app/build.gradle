@@ -37,6 +37,7 @@ android {
     }
     productFlavors {
     }
+    namespace 'com.example.android.codelabs.lifecycle'
 }
 
 dependencies {
